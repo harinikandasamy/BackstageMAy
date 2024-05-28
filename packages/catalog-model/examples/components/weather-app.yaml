@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: weather-app
+  annotations:
+    backstage.io/source-template: template:default/weather-app
+    backstage.io/linguist: 'https://github.com/imprem/weather-app/tree/master'
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: service
+  owner: guests
+  lifecycle: experimental
+  system: test-app
+  apiConsumedBy: ['component:react-app1']

@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: tokenBalance-app
+  annotations:
+    backstage.io/source-template: template:default/tokenBalance-app
+    backstage.io/linguist: 'https://github.com/imprem/tokenBalance-app/tree/master'
+spec:
+  type: service
+  owner: guests
+  system: test-app
+  lifecycle: experimental
+  apiConsumedBy: ['component:react-app1']
