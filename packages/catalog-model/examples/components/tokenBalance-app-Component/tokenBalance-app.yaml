@@ -1,0 +1,30 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: TokenBalance_Component
+  annotations:
+    backstage.io/source-template: template:default/TokenBalance-app
+    backstage.io/linguist: https://github.com/imprem/tokenBalance-app
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: service
+  owner: guests
+  lifecycle: experimental
+  providesApis:
+    - Tier1-token-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: Tier1-token-api
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+  description: Token Balance details for Tier1_Supplier
+spec:
+  type: openapi
+  owner: guests
+  lifecycle: experimental
+  system: test-app
+  definition:
+    $text: https://github.com/imprem/weather-app/blob/master/weather-app-api-swagger.json 
+ 

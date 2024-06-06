@@ -1,0 +1,1 @@
+# This is a parent component that consumes all the three API's.

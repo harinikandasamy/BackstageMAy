@@ -5,7 +5,7 @@ import { apiDocsPlugin, ApiExplorerPage } from '@backstage/plugin-api-docs';
 <Route path="/api-docs" element={<ApiExplorerPage />} />;
 
 
-
+// import { UselessFactsCard } from '@internal/backstage-plugin-demomay';
 import {
   CatalogEntityPage,
   CatalogIndexPage,
@@ -43,6 +43,10 @@ import { AppRouter, FlatRoutes } from '@backstage/core-app-api';
 import { CatalogGraphPage } from '@backstage/plugin-catalog-graph';
 import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
+// import { myProductsPlugin } from '@internal/backstage-plugin-my-products-plugin';
+// import { ex1-plugin} from '@internal/backstage-plugin-ex1-plugin';
+// import { Ex1PluginPage } from '@internal/backstage-plugin-ex1-plugin';
+
 
 
 
@@ -109,8 +113,12 @@ const routes = (
     </Route>
     <Route path="/settings" element={<UserSettingsPage />} />
     <Route path="/catalog-graph" element={<CatalogGraphPage />} />
+    {/* <Route path="/uselessfacts" element={<UselessFactsCard />} /> */}
 {/*   
   <Route path="/demoplugin" element={<DemopluginPage />} /> */}
+  {/* <Route path="/may" element={<MayPage />} /> */}
+  {/* <Route path="/my-products-plugin" element={<myProductsPlugin/>} /> */}
+   {/* <Route path="/ex1-plugin" element={<Ex1PluginPage />} /> */}
   </FlatRoutes>
 );
 

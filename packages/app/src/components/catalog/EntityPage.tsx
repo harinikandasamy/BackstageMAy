@@ -59,6 +59,7 @@ import {
 
 import { TechDocsAddons } from '@backstage/plugin-techdocs-react';
 import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
+import { Ex1PluginPage } from '@internal/backstage-plugin-ex1-plugin';
 
 const techdocsContent = (
   <EntityTechdocsContent>
@@ -142,6 +143,47 @@ const overviewContent = (
   </Grid>
 );
 
+// const serviceEntityPage = (
+//   <EntityLayout>
+//     <EntityLayout.Route path="/" title="Overview">
+//       {overviewContent}
+//     </EntityLayout.Route>
+
+//     <EntityLayout.Route path="/ci-cd" title="CI/CD">
+//       {cicdContent}
+//     </EntityLayout.Route>
+
+//     <EntityLayout.Route path="/api" title="API">
+//       <Grid container spacing={3} alignItems="stretch">
+//         <Grid item md={6}>
+//           <EntityProvidedApisCard />
+//         </Grid>
+//         <Grid item md={6}>
+//           <EntityConsumedApisCard />
+//         </Grid>
+//       </Grid>
+//     </EntityLayout.Route>
+
+//     <EntityLayout.Route path="/dependencies" title="Dependencies">
+//       <Grid container spacing={3} alignItems="stretch">
+//         <Grid item md={6}>
+//           <EntityDependsOnComponentsCard variant="gridItem" />
+//         </Grid>
+//         <Grid item md={6}>
+//           <EntityDependsOnResourcesCard variant="gridItem" />
+//         </Grid>
+//       </Grid>
+//     </EntityLayout.Route>
+
+//     <EntityLayout.Route path="/docs" title="Docs">
+//       {techdocsContent}
+//     </EntityLayout.Route>
+
+//     <EntityLayout.Route path="/ex1-plugin" title="My Plugin">
+//       <Ex1PluginPage />
+//     </EntityLayout.Route>
+//   </EntityLayout>
+// );
 const serviceEntityPage = (
   <EntityLayout>
     <EntityLayout.Route path="/" title="Overview">
@@ -178,6 +220,9 @@ const serviceEntityPage = (
       {techdocsContent}
     </EntityLayout.Route>
   </EntityLayout>
+
+     
+  
 );
 
 const websiteEntityPage = (

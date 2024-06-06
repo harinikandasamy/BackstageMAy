@@ -1,0 +1,1 @@
+# This is a product details component consuming Product details API.

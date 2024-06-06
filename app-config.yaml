@@ -52,13 +52,25 @@ integrations:
     #   apiBaseUrl: https://ghe.example.net/api/v3
     #   token: ${GHE_TOKEN}
 
-proxy:
+# proxy:
 
- endpoints:
- '/uselessfacts/api':
- changeOrigin: true
- target: 'https://uselessfacts.jsph.pl'
- secure: false
+#  endpoints:
+#  '/uselessfacts/api':
+#  changeOrigin: true
+#  target: 'https://uselessfacts.jsph.pl'
+#  secure: false
+# proxy:
+#   '/sairam':  # Customize this path as needed
+#     target: https://dummyjson.com/products
+#     headers:
+#       X-Custom-Source: backstage  # Optional custom header
+
+
+# proxy:
+#  '/uselessfacts/api':
+#  changeOrigin: true
+#  target: 'https://uselessfacts.jsph.pl'
+#  secure: false
  
   ### Example for how to add a proxy endpoint for the frontend.
   ### A typical reason to do this is to handle HTTPS and CORS for internal services.
@@ -99,16 +111,19 @@ catalog:
       target: ../../examples/entities.yaml
 
     - type: file
-      target: ../catalog-model/examples/components/react-app1.yaml
+      target: ../catalog-model/examples/components/Parent-component/react-app1.yaml
 
     - type: file
-      target: ../catalog-model/examples/components/weather-app.yaml
+      target: ../catalog-model/examples/components/weatherapp_component/weather-app.yaml
 
     - type: file
-      target: ../catalog-model/examples/components/tokenBalance-app.yaml
-
+      target: ../catalog-model/examples/components/tokenBalance-app-Component/tokenBalance-app.yaml
+      
     - type: file
-      target: ../catalog-model/examples/apis/weather-app.yaml
+      target: ../catalog-model/examples/components/productdetails-component/product-details.yaml
+
+    # - type: file
+    #   target: ../catalog-model/examples/components/ex1-plugin.yaml
 
 
     # Local example template

@@ -1,0 +1,31 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ProductDetails_Component
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/source-template: template:default/productDetails-app
+    backstage.io/linguist: https://github.com/Sada-r/productDetails-app/tree/master
+    
+spec:
+  type: service
+  owner: guests
+  lifecycle: experimental
+  providesApis:
+    - product-api
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: product-api
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+  description: This product api gives some dummy products
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: guests
+  definition:
+    $text: https://github.com/Sada-r/backend/blob/master/product-api-swagger.json

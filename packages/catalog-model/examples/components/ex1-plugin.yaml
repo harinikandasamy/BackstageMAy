@@ -1,0 +1,14 @@
+# apiVersion: backstage.io/v1alpha1
+# kind: Component
+# metadata:
+#   name: Ex1-plugin 
+  
+# spec:
+#   type: service
+#   owner: guests
+#   lifecycle: experimental
+#   consumesApis: 
+#     - product-api
+#   dependsOn:
+#     - component:product-app
+   

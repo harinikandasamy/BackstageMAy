@@ -1,0 +1,12 @@
+.products { 
+    display: flex; 
+    flex-direction: row; 
+    margin-top: 30vh; 
+    justify-content: space-between; 
+    text-align: right; 
+} 
+  
+.img { 
+    height: 100px; 
+    width: 100px; 
+}

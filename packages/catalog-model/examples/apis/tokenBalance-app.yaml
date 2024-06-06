@@ -1,0 +1,26 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: Tier1-token-api
+  description: Token Balance details for Tier1_Supplier
+spec:
+  type: openapi
+  owner: guests
+  lifecycle: experimental
+  definition:
+    $text: https://github.com/Sada-r/tokenBalance/blob/master/tier1-supplier-api-swagger.json
+ 
+# ---
+# apiVersion: backstage.io/v1alpha1
+# kind: API
+# metadata:
+#   name: Tier2-token-api
+#   description: Token Balance details for Tier2_Supplier
+# spec:
+#   type: openapi
+#   owner: guests
+#   lifecycle: experimental
+#   # system: test-app
+#   definition:
+#     $text: https://github.com/Sada-r/tokenBalance/blob/master/tier2-supplier-api-swagger.json
+

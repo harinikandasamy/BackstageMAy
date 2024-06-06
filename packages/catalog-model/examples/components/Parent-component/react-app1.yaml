@@ -1,10 +1,9 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: react-app1
+  name: Parent-component
   annotations:
-    # github.com/project-slug: imprem/react-app1
-    # backstage.io/techdocs-ref: dir:.
+    backstage.io/techdocs-ref: dir:.
     backstage.io/source-template: template:default/react-app1
     backstage.io/linguist: 'https://github.com/imprem/react-app1/tree/main'
   
@@ -13,8 +12,12 @@ spec:
   type: website
   lifecycle: unknown
   owner: guests
-  system: test-app
+  
   consumesApis: 
-    - 'component:weather-app' 
-    - 'component:tokenBalance-app'
-    - 'component:poductDetails-app'
+    - weather-api
+    - Tier1-token-api
+    - product-api
+  dependsOn:
+    - component:ProductDetails_Component
+    - component:Weather_Component
+    - component:TokenBalance_Component
